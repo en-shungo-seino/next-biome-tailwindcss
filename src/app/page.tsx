@@ -1,95 +1,200 @@
 import Image from "next/image";
-import styles from "./page.module.css";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<main className="bg-gray-100 min-h-screen p-8">
+			<header className="flex flex-wrap justify-between items-center py-4">
+				<h1 className="text-3xl font-bold text-gray-800 mb-4 sm:mb-0">JobBoard</h1>
+				<nav className="flex-shrink-0">
+					<ul className="flex space-x-4">
+						<li>
+							<a href="/" className="text-gray-600 hover:text-gray-800">
+								Home
+							</a>
+						</li>
+						<li>
+							<a href="/" className="text-gray-600 hover:text-gray-800">
+								Jobs
+							</a>
+						</li>
+						<li>
+							<a href="/" className="text-gray-600 hover:text-gray-800">
+								About
+							</a>
+						</li>
+						<li>
+							<a href="/" className="text-gray-600 hover:text-gray-800">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+			<section className="mt-12">
+				<h2 className="text-4xl font-bold text-gray-800 mb-8">Featured Jobs</h2>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div className="bg-white p-6 rounded-lg shadow-lg">
+						<Image
+							src="/frontend-developer.png"
+							alt="Company Logo"
+							width={400}
+							height={240}
+							className="mb-4"
+						/>
+						<h3 className="font-semibold text-xl text-gray-800 mb-2">Frontend Developer</h3>
+						<p className="text-gray-600">
+							A tech company in San Francisco is looking for a skilled Frontend Developer to join
+							their team. Experience with React is a must.
+						</p>
+						<div className="flex justify-between items-center mt-4">
+							<span className="text-sm text-gray-500">Full-time</span>
+							<span className="text-sm text-gray-500">San Francisco, CA</span>
+						</div>
+						<div className="flex justify-between items-center mt-2">
+							<span className="text-lg font-bold text-gray-800">$120k - $150k</span>
+							<a href="/" className="text-blue-600 hover:underline text-sm">
+								Learn more &rarr;
+							</a>
+						</div>
+						<button
+							type="button"
+							className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 ease-in-out"
+						>
+							Apply Now
+						</button>
+					</div>
+					{/* Backend Developer Job Card */}
+					<div className="bg-white p-6 rounded-lg shadow-lg">
+						<Image
+							src="/backend-developer.png"
+							alt="Backend Developer Logo"
+							width={400}
+							height={240}
+							className="mb-4"
+						/>
+						<h3 className="font-semibold text-xl text-gray-800 mb-2">Backend Developer</h3>
+						<p className="text-gray-600">
+							Innovative startup seeks Backend Developer with Node.js experience.
+						</p>
+						<div className="flex justify-between items-center mt-4">
+							<span className="text-sm text-gray-500">Full-time</span>
+							<span className="text-sm text-gray-500">New York, NY</span>
+						</div>
+						<div className="flex justify-between items-center mt-2">
+							<span className="text-lg font-bold text-gray-800">$110k - $135k</span>
+							<a href="/" className="text-blue-600 hover:underline text-sm">
+								Learn more &rarr;
+							</a>
+						</div>
+						<button
+							type="button"
+							className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 ease-in-out"
+						>
+							Apply Now
+						</button>
+					</div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+					{/* Data Scientist Job Card */}
+					<div className="bg-white p-6 rounded-lg shadow-lg">
+						<Image
+							src="/data-scientist.png"
+							alt="Data Scientist Logo"
+							width={400}
+							height={240}
+							className="mb-4"
+						/>
+						<h3 className="font-semibold text-xl text-gray-800 mb-2">Data Scientist</h3>
+						<p className="text-gray-600">
+							Leading tech firm requires Data Scientist skilled in machine learning and statistical
+							analysis.
+						</p>
+						<div className="flex justify-between items-center mt-4">
+							<span className="text-sm text-gray-500">Part-time</span>
+							<span className="text-sm text-gray-500">Remote</span>
+						</div>
+						<div className="flex justify-between items-center mt-2">
+							<span className="text-lg font-bold text-gray-800">$90k - $120k</span>
+							<a href="/" className="text-blue-600 hover:underline text-sm">
+								Learn more &rarr;
+							</a>
+						</div>
+						<button
+							type="button"
+							className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 ease-in-out"
+						>
+							Apply Now
+						</button>
+					</div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+					{/* Full Stack Developer Job Card */}
+					<div className="bg-white p-6 rounded-lg shadow-lg">
+						<Image
+							src="/full-stack-developer.png"
+							alt="Full Stack Developer Logo"
+							width={400}
+							height={240}
+							className="mb-4"
+						/>
+						<h3 className="font-semibold text-xl text-gray-800 mb-2">Full Stack Developer</h3>
+						<p className="text-gray-600">
+							Full Stack Developer needed for a dynamic team. Proficiency in React and Django is
+							essential.
+						</p>
+						<div className="flex justify-between items-center mt-4">
+							<span className="text-sm text-gray-500">Contract</span>
+							<span className="text-sm text-gray-500">Austin, TX</span>
+						</div>
+						<div className="flex justify-between items-center mt-2">
+							<span className="text-lg font-bold text-gray-800">$100k - $130k</span>
+							<a href="/" className="text-blue-600 hover:underline text-sm">
+								Learn more &rarr;
+							</a>
+						</div>
+						<button
+							type="button"
+							className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 ease-in-out"
+						>
+							Apply Now
+						</button>
+					</div>
+					{/* UI/UX Designer Job Card */}
+					<div className="bg-white p-6 rounded-lg shadow-lg">
+						<Image
+							src="/ui-ux-designer.png"
+							alt="UI/UX Designer Logo"
+							width={400}
+							height={240}
+							className="mb-4"
+						/>
+						<h3 className="font-semibold text-xl text-gray-800 mb-2">UI/UX Designer</h3>
+						<p className="text-gray-600">
+							Creative agency seeking a UI/UX Designer with a passion for user-centered design and
+							prototyping.
+						</p>
+						<div className="flex justify-between items-center mt-4">
+							<span className="text-sm text-gray-500">Freelance</span>
+							<span className="text-sm text-gray-500">Seattle, WA</span>
+						</div>
+						<div className="flex justify-between items-center mt-2">
+							<span className="text-lg font-bold text-gray-800">$70k - $90k</span>
+							<a href="/" className="text-blue-600 hover:underline text-sm">
+								Learn more &rarr;
+							</a>
+						</div>
+						<button
+							type="button"
+							className="mt-4 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300 ease-in-out"
+						>
+							Apply Now
+						</button>
+					</div>
+				</div>
+			</section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+			<footer className="mt-12 pt-6 border-t border-gray-300 text-center">
+				<p className="text-gray-600">&copy; 2024 JobBoard. All rights reserved.</p>
+			</footer>
+		</main>
+	);
 }
